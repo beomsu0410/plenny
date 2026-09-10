@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>플래니 · 아이폰 가계부</title>
+<meta name="description" content="쓸 수 있는 돈이 얼마인지 먼저 알려주는 아이폰 가계부. 모든 기록은 기기 안에만 저장됩니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#F7F8F6; --surface:#FFFFFF; --ink:#171B18; --ink2:#3D453F;
+  --muted:#6A736C; --line:#E1E5DF; --accent:#2E8B57; --accent-soft:#E7F2EC;
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#101310; --surface:#191D19; --ink:#E6EAE5; --ink2:#C2C9C1;
+    --muted:#8E978F; --line:#2A302B; --accent:#56B786; --accent-soft:#1B2C22;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:'IBM Plex Sans KR',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;
+  font-size:16px; line-height:1.78; -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:720px; margin:0 auto; padding-inline:22px; padding-block:72px 96px}
+a{color:var(--accent); text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--accent); outline-offset:3px; border-radius:4px}
+
+.mark{display:inline-block; font-size:34px; font-weight:700; letter-spacing:-.03em; color:var(--accent)}
+.mark::after{content:""; display:block; height:5px; border-radius:3px; background:var(--accent);
+  margin-top:3px; width:100%}
+h1{margin:26px 0 0; font-size:clamp(23px,4.6vw,29px); font-weight:600; letter-spacing:-.02em; line-height:1.42}
+.lede{margin-top:14px; color:var(--ink2); max-width:56ch}
+.status{display:inline-block; margin-top:20px; font-size:13.5px; font-weight:500;
+  color:var(--accent); background:var(--accent-soft); border:1px solid var(--line);
+  border-radius:999px; padding:4px 14px}
+
+section{margin-top:48px}
+h2{margin:0 0 14px; font-size:18px; font-weight:600; letter-spacing:-.01em}
+p{margin:0 0 12px; color:var(--ink2)}
+p:last-child{margin-bottom:0}
+
+.feats{display:grid; gap:10px; margin:0; padding:0; list-style:none}
+.feats li{background:var(--surface); border:1px solid var(--line); border-radius:11px; padding:15px 18px}
+.feats b{display:block; font-size:15.5px; font-weight:600; color:var(--ink)}
+.feats span{font-size:14.5px; color:var(--muted)}
+
+.qa{border-top:1px solid var(--line)}
+.qa > div{padding:16px 0; border-bottom:1px solid var(--line)}
+.qa b{display:block; font-size:15.5px; font-weight:600; margin-bottom:5px}
+.qa p{font-size:15px; margin:0}
+
+footer{margin-top:56px; padding-top:24px; border-top:1px solid var(--line);
+  font-size:14px; color:var(--muted); display:flex; gap:16px; flex-wrap:wrap}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="mark">plenny</span>
+  <h1>쓸 수 있는 돈이 얼마인지<br>먼저 알려주는 가계부</h1>
+  <p class="lede">수입에서 정기지출과 저축을 먼저 빼고, 이번 달 실제로 쓸 수 있는 금액을 보여줍니다.
+  기록은 전부 아이폰 안에만 저장됩니다.</p>
+  <span class="status">App Store 출시 준비 중</span>
+</header>
+
+<section>
+  <h2>이런 걸 합니다</h2>
+  <ul class="feats">
+    <li><b>가용예산</b><span>총수입에서 정기지출·저축을 뺀 금액과, 남은 날짜로 나눈 하루 예산을 보여줍니다.</span></li>
+    <li><b>정기내역</b><span>월세·통신비처럼 반복되는 항목을 등록해 두면 예정일에 맞춰 챙겨줍니다. 매월 마지막 날, 매월 둘째 금요일 같은 규칙도 됩니다.</span></li>
+    <li><b>달력</b><span>날짜별 수입·지출을 한눈에 보고, 그날 내역을 바로 확인합니다.</span></li>
+    <li><b>위젯</b><span>홈 화면에서 남은 예산을 확인하고, 제어 센터에서 바로 지출을 기록합니다.</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>자주 묻는 것</h2>
+  <div class="qa">
+    <div>
+      <b>기록한 내용이 어디로 전송되나요?</b>
+      <p>아니요. 앱에는 외부와 통신하는 기능이 없습니다. 입력한 내용은 아이폰 안에만 저장되고,
+      개발자도 볼 수 없습니다. 자세한 내용은 <a href="privacy/">개인정보 처리방침</a>에 있습니다.</p>
+    </div>
+    <div>
+      <b>기기를 바꾸면 기록이 옮겨지나요?</b>
+      <p>현재 버전은 기기 안에만 저장하므로 자동으로 옮겨지지 않습니다.</p>
+    </div>
+    <div>
+      <b>구독은 어떻게 해지하나요?</b>
+      <p>iOS 설정 &gt; 사용자 이름 &gt; 구독 에서 언제든 해지할 수 있습니다.
+      해지해도 무료 체험 기간이 끝날 때까지는 그대로 쓰실 수 있습니다.</p>
+    </div>
+    <div>
+      <b>지원되는 기기는요?</b>
+      <p>iOS 18 이상의 iPhone 입니다.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>문의</h2>
+  <p>버그 제보나 기능 제안 모두 환영합니다.
+  <a href="mailto:beomsu0410@gmail.com">beomsu0410@gmail.com</a> 으로 보내주세요.</p>
+</section>
+
+<footer>
+  <a href="privacy/">개인정보 처리방침</a>
+  <span>최종 수정 2026-09-10</span>
+</footer>
+
+</div>
+</body>
+</html>
